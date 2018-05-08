@@ -1,19 +1,6 @@
 ---
 
-- hosts: Local
-  
-  tasks:
-    - name: run the boto script
-      shell: pyhton botoScript/instantceSetup.py
-      
-    - name: launch config.yml
-      include: config.yml
-    
-    - name: launch enviSetup.yaml
-      include: enviSetup.yaml
-
-    - name: launch couchDBSetup.yaml
-      include: couchDBSetup.yaml
-
-    - name: launch start.yml
-      include: start.yml
+- include: config.yml
+- include: enviSetup.yaml
+- include: couchDBSetup.yaml 
+- include: start.yml

@@ -18,7 +18,7 @@ def create_instance():
 	avail_zone = 'melbourne-qh2'
 	
 	print "creating instance"
-	instance_pool = ec2_conn.run_instances('ami-00003837', #imageID
+	instance_pool = ec2_conn.run_instances('ami-e2d5e55e', #imageID
 							key_name = 'Inst1',
 							instance_type = 'm1.medium',
 							security_groups = ['ssh','https','couchdb','erlang','icpm'],
